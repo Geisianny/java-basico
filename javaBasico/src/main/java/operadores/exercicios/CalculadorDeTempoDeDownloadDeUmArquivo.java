@@ -21,7 +21,7 @@ public class CalculadorDeTempoDeDownloadDeUmArquivo {
         
         float tempo = 0;
         
-        tempo = tamanho * velocidade;
+        tempo = tamanho / velocidade;
         System.out.println("O tempo aproximado do download do aquivo usando o "
                 + "link em minutos é: "+ tempo );
     }
