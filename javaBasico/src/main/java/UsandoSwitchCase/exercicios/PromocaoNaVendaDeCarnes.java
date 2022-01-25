@@ -12,64 +12,62 @@ public class PromocaoNaVendaDeCarnes {
     public static void main(String[] args) {
         
         Scanner scan = new Scanner(System.in);
-        
-        System.out.println("Digite o tipo e a quantidade de carne: ");
-        String tipo = scan.nextLine();
-        int quantidade = scan.nextInt();
-        
-        System.out.println("Tem cartão Tabajara (S/N)? ");
-        String resp = scan.next();
-        
-        double totalCarne = 0;
-        switch(tipo){
-            
-            case "file duplo":
-                if(quantidade >= 5){
-                    totalCarne = 4.90 * quantidade;
-                }else{
-                    totalCarne = 5.80 * quantidade;
-                }
-                
-                break;
-                
-            case "alcatra":
-                if(quantidade >= 5){
-                    totalCarne = 5.90 * quantidade;
-                }else{
-                    totalCarne = 6.80 * quantidade;
-                }
-                break;
-                
-                
-            case "picanha":
-                if(quantidade >= 5){
-                    totalCarne = 6.90 * quantidade;
-                }else{
-                    totalCarne = 7.80 * quantidade;
-                }
-                
-                break;
-                
-            default:
-                System.out.println("Opção de carne invalida!");
+
+        System.out.println("Entre com o tipo da carne:");
+        System.out.println("1 - file duplo");
+        System.out.println("2 - alcatra");
+        System.out.println("3 - picanha");
+        int tipo = scan.nextInt();
+
+        System.out.println("Entre com a quantidade (kg):");
+        double qtd = scan.nextDouble();
+
+        double precoKg = 0;
+
+        if (tipo == 1){
+
+            System.out.println(qtd + "kg - file duplo");
+
+            if (qtd < 5){
+               precoKg = 4.9; 
+            } else {
+                precoKg = 5.8;
+            }
+
+
+        } else if (tipo == 2){
+
+            System.out.println(qtd + "kg - alcatra");
+
+            if (qtd < 5){
+               precoKg = 5.9; 
+            } else {
+                precoKg = 6.8;
+            }
+        } else if (tipo == 3){
+
+            System.out.println(qtd + "kg - picanha");
+
+            if (qtd < 5){
+               precoKg = 6.9; 
+            } else {
+                precoKg = 7.8;
+            }
         }
-        double desconto = 0;
-        double totalCarneComDesconto = 0;
-        
-        if( resp.equalsIgnoreCase("S")){
-            desconto = totalCarne*5/100;
-            totalCarneComDesconto = totalCarne - desconto ;
-        }else{
-            totalCarneComDesconto = totalCarne;
+
+        double total = qtd * precoKg;
+        System.out.println(qtd + "kg * " + precoKg + " = " + total);
+
+        System.out.println("Compra no cartão? digite 1 para sim:");
+        int cartao = scan.nextInt();
+
+        if (cartao == 1){
+            double desconto = (total / 100) * 5;
+            System.out.println("Desconto de: " + desconto);
+            System.out.println("Valor a pagar: " + (total - desconto));
+        } else {
+            System.out.println("Valor a pagar: " + total);
         }
-        
-        System.out.println("----- NOTA FISCAL ----");
-        System.out.println("Tipo de carne: " + tipo);
-        System.out.println("Quantidade: " + quantidade);
-        System.out.printf("Preco total: %.2f \n", totalCarne);
-        System.out.println("Tipo de pagamento: cartão Tabajara? " + resp);
-        System.out.printf("Valor do desconto: %.2f \n", desconto);
-        System.out.printf("Valor a pagar: %.2f \n" ,totalCarneComDesconto);
     }
     
     

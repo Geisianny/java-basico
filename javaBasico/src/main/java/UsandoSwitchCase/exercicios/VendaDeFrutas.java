@@ -14,40 +14,34 @@ public class VendaDeFrutas {
         Scanner scan = new Scanner(System.in);
         
         System.out.println("Digite os kgs de maça e morango: ");
-        float maca = scan.nextFloat();
-        float morango = scan.nextFloat();
+        float qtdMaca = scan.nextFloat();
+        float qtdMorango = scan.nextFloat();
         
-        double totalMorango = 0;
-        double totalMaca = 0;
-        
-        if(morango <= 5){
-            
-            totalMorango = 2.50* morango;
-        
-        }else if(morango > 5){
-            
-            totalMorango = 2.20 * morango;
+        double precoKgMorango = 0;
+        if (qtdMorango <= 5){
+           precoKgMorango =  2.5;
+        } else {
+            precoKgMorango =  2.2;
         }
-        
-        if(maca <= 5){
-            
-            totalMaca = 1.80 * maca;
-            
-        }else if(maca > 5){
-            
-            totalMaca = 1.50 * maca;
+
+        double precoKgMaca = 0;
+        if (qtdMaca <= 5){
+            precoKgMaca = 1.8;
+        } else {
+            precoKgMaca = 1.5;
         }
-        
-        if( morango >= 8  || totalMorango >= 25 ){
-            totalMorango = totalMorango - (totalMorango*10)/100;
+
+        double precoTotalMorango = qtdMorango * precoKgMorango;
+        double precoTotalMaca = qtdMaca * precoKgMaca;
+
+         double precoParcial = precoTotalMorango + precoTotalMaca;
+        double precoTotal = precoParcial;
+
+        if ((qtdMorango + qtdMaca > 8) || precoParcial > 25){
+            precoTotal = precoParcial - ((precoParcial / 100) * 10);
         }
-        
-        if(maca >= 8 || totalMaca >= 25){
-            totalMaca = totalMaca - (totalMaca*10)/100;
-        }
-        
-        System.out.println("O pagamento total da maça é: " + totalMaca);
-        System.out.println("O pagamento total do morango é: " + totalMorango);
+
+        System.out.println("Preco total = " + precoTotal);
     }
     
 }
