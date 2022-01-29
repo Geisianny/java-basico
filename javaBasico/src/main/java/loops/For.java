@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package loops;
 
 /**
@@ -9,12 +6,27 @@ package loops;
  * @author VAIO
  */
 public class For {
-
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        for(int i = 0; i<5; i++){
+            System.out.println("i tem valor: " + i);
+            
+        }
+        
+        for(int i = 5; i> 0; i--){
+            System.out.println("i tem valor: " + i);
+            
+        }
+        
+        for(int cont = 0; cont < 10; cont += 2){
+            System.out.println("Valor de cont: "+ cont);
+        }
+           
+        int soma = 0;
+        for(int i = 1; i< 5; soma += i++);
+        System.out.println("O valor da soma é" + soma);
+        
     }
     
 }
