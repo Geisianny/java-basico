@@ -1,20 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package loops.exercicios;
 
-/**
- *
+import java.util.Scanner;
+
+/** Lista 3
+ * Questao 3
  * @author VAIO
  */
 public class Q3_RegistroNoSistema {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Scanner scan = new Scanner(System.in);
+        
+        boolean valido = false;
+        
+        do{
+            System.out.println("Digite um nome: ");
+            String nome = scan.nextLine();
+            
+            if(nome.equalsIgnoreCase(3)){
+                
+            }
+        }while(!valido);
+        
     }
     
 }
