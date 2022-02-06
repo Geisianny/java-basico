@@ -14,7 +14,7 @@ public class Q7_OmaiorDeCincoNumeros {
         Scanner scan = new Scanner(System.in);
         
         int numero = 0;
-        int maior = 0;
+        int maior = Integer.MIN_VALUE; //Menor valor possivel
         
         System.out.println("Digite 5 numeros: ");
         for(int i = 0; i < 5; i++){

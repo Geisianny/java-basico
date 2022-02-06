@@ -14,6 +14,7 @@ public class Q2_SolicitacaoDeLogin {
         Scanner scan = new Scanner(System.in);
         
         boolean valido = false;
+        
         do{
             System.out.println("Digite um nome: ");
             String nome = scan.nextLine();
@@ -21,7 +22,7 @@ public class Q2_SolicitacaoDeLogin {
             System.out.println("Digite uma senha: ");
             String senha = scan.nextLine();
             
-            if(nome.equals(senha)){
+            if(nome.equalsIgnoreCase(senha)){
                 System.out.println("ERRO! a senha não pode ser igual ao login!");
             }else{
                 System.out.println("Senha e login validos!");

@@ -15,6 +15,7 @@ public class Q3_RegistroNoSistema {
         
         boolean valido = false;
         String nome = null;
+        
         int idade = 0;
         float salario;
         String sexo;
