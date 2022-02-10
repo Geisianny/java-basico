@@ -14,18 +14,26 @@ public class Q11_ParesDeUmVetor {
         Scanner scan = new Scanner(System.in);
         
         int[] numeros = new int[10];
+        int[] pares = new int[10];
         for(int i =0; i<10;i++){
             System.out.printf("Digite o %d º numero: \n",i+1);
-            numeros[i] = scan.nextInt();
+            numeros[i]= scan.nextInt();
             
         }
         System.out.println("São pares os numeros: ");
         
         for(int i = 0; i< 10; i++){
             if(numeros[i] % 2 == 0){
-                System.out.print(numeros[i] +", ");
+                pares[i] = numeros[i]; 
             }
+                
         }
+        
+        for(int i = 0; i <10; i++){
+            System.out.print(pares[i] +", ");
+        }
+        System.out.println("\nA quantidade de numeros pares digitados é: "+
+                (pares.length));
     }
     
 }
