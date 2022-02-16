@@ -10,8 +10,8 @@ public class Q09_DivisaoDe2Vetores {
     public static void main(String[] args) {
         
         int[] vetA = new int[10];
-        float[] vetB = new float[10];
-        float[] vetC = new float[10];
+        int[] vetB = new int[10];
+        double[] vetC = new double[10];
         
         for(int i =0;i<10;i++){
             vetA[i] = i*2 + 3;

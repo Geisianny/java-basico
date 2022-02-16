@@ -1,7 +1,6 @@
 
 package array.exercicios;
 
-import java.util.Scanner;
 
 /**Lista 4
  * Questap 2
