@@ -13,18 +13,24 @@ public class Q12_SomaDeElementosDeUmVetor {
         
         
         Scanner scan = new Scanner(System.in);
+        
         int[] numeros = new int [10];
         int soma = 0;
         
         for(int i = 0; i< 10 ; i++){
             System.out.printf("Digite o %dº elemento do vetor: \n ",(i+1));
-           // numeros[i] = scan.nextInt();
+            numeros[i] = scan.nextInt();
             
             soma += numeros[i];
             
         }
         
-        System.out.println("A soma dos elementos dos vetores é: " + soma);
+        System.out.print("Vetor A: ");
+        for(int i =0; i< 10; i++){
+            System.out.print(numeros[i]+", ");
+        }
+        
+        System.out.println("\nA soma dos elementos dos vetores é: " + soma);
     }
     
 }
