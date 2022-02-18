@@ -27,8 +27,8 @@ public class Q22_ElementosAleatoriosDeUmVetor {
             }
         }
         
-        System.out.println("Quantidade de 1: " + cont1);
-        System.out.println("Quantidade de 0: " + cont0);
+        System.out.println("Percentual de 1: " + (cont1*100)/numeros.length);
+        System.out.println("Percentual de 0: " + (cont0*100)/numeros.length);
     }
     
 }

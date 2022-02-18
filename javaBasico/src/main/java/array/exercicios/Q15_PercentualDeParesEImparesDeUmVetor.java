@@ -27,8 +27,10 @@ public class Q15_PercentualDeParesEImparesDeUmVetor {
             }
                
         }
-        System.out.println("Quantidade de impares: "+contImpar);
-        System.out.println("Quantidade de pares: " + contPar);
+        System.out.println("Percentual  de impares: "+((contImpar * 100)/
+                numeros.length));
+        System.out.println("Percentual de pares: " + ((contPar * 100)/
+                numeros.length));
         
     }
     
